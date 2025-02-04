@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Smart Study Planner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet">    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+    <script src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
+    <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#000000" data-border-radius="small"></script>
+</head>
+<body class="bg-gray-50 font-sans">
+    <header class="bg-white shadow-sm fixed w-full z-50">
+        <nav class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">                        <img class="h-8 w-auto" src="https://ai-public.creatie.ai/gen_page/logo_placeholder.png" alt="Logo">
+                    </div>                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="#" class="border-custom text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Dashboard</a>
+                        <a href="calender.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Calendar</a>
+                        <a href="subject.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Subjects</a>
+                        <a href="resources.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Resources</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <button class="bg-custom text-white !rounded-button px-4 py-2 text-sm font-medium hover:bg-custom/90">Sign In</button>
+                    <button class="ml-4 border border-custom text-custom !rounded-button px-4 py-2 text-sm font-medium hover:bg-gray-50">Register</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pt-16">
+        <section class="bg-white">            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">                    <div>
+                        <h1 class="text-4xl font-bold text-gray-900 mb-4">Study Smarter, Not Harder</h1>                        <p class="text-lg text-gray-600 mb-8">AI-powered study planner that adapts to your learning style and helps you achieve your academic goals.</p>                        <button class="bg-custom text-white !rounded-button px-6 py-3 text-base font-medium hover:bg-custom/90">Get Started Free</button>
+                    </div>
+                    <div class="relative">
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gray-50 py-12">            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900">Smart Planning Tools</h2>
+                    <p class="mt-4 text-lg text-gray-600">Everything you need to organize your studies effectively</p>                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow p-6">                        <div class="h-64" id="studyChart"></div>
+                        <h3 class="text-lg font-medium text-gray-900 mt-4">Study Progress</h3>
+                        <p class="text-gray-600">Track your study hours and completion rates</p>
+                    </div>                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="space-y-4">
+                            <h3 class="text-lg font-medium text-gray-900">Today's Tasks</h3>
+                            <div class="space-y-2">
+                                <div class="flex items-center p-3 bg-gray-50 rounded-lg">                                    <input type="checkbox" class="h-4 w-4 text-custom rounded border-gray-300">
+                                    <span class="ml-3 text-gray-700">Mathematics Chapter 5</span>
+                                    <span class="ml-auto text-sm text-gray-500">2h</span>
+                                </div>                                <div class="flex items-center p-3 bg-gray-50 rounded-lg">
+                                    <input type="checkbox" class="h-4 w-4 text-custom rounded border-gray-300">                                    <span class="ml-3 text-gray-700">Physics Lab Report</span>
+                                    <span class="ml-auto text-sm text-gray-500">1.5h</span>
+                                </div>
+                                <div class="flex items-center p-3 bg-gray-50 rounded-lg">                                    <input type="checkbox" class="h-4 w-4 text-custom rounded border-gray-300">
+                                    <span class="ml-3 text-gray-700">Literature Essay</span>
+                                    <span class="ml-auto text-sm text-gray-500">3h</span>
+                                </div>                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow p-6">                        <h3 class="text-lg font-medium text-gray-900 mb-4">Quick Actions</h3>
+                        <div class="space-y-4">                            <button class="w-full bg-gray-50 text-gray-700 !rounded-button px-4 py-3 text-sm font-medium hover:bg-gray-100 flex items-center">                                <i class="fas fa-plus-circle mr-2 text-custom"></i>
+                                Create New Study Session
+                            </button>                            <button class="w-full bg-gray-50 text-gray-700 !rounded-button px-4 py-3 text-sm font-medium hover:bg-gray-100 flex items-center">                                <i class="fas fa-users mr-2 text-custom"></i>
+                                Join Study Group
+                            </button>                            <button class="w-full bg-gray-50 text-gray-700 !rounded-button px-4 py-3 text-sm font-medium hover:bg-gray-100 flex items-center">                                <i class="fas fa-book mr-2 text-custom"></i>
+                                Access Resources
+                            </button>                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white py-12">            <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900">AI-Powered Features</h2>
+                    <p class="mt-4 text-lg text-gray-600">Let our AI help you optimize your study routine</p>                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center p-6">                        <div class="h-12 w-12 rounded-full bg-custom/10 text-custom inline-flex items-center justify-center mb-4">                            <i class="fas fa-brain text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-medium text-gray-900">Smart Recommendations</h3>
+                        <p class="mt-2 text-gray-600">Get personalized study suggestions based on your performance</p>                    </div>
+
+                    <div class="text-center p-6">
+                        <div class="h-12 w-12 rounded-full bg-custom/10 text-custom inline-flex items-center justify-center mb-4">                            <i class="fas fa-clock text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-medium text-gray-900">Automatic Scheduling</h3>
+                        <p class="mt-2 text-gray-600">Generate optimal study schedules that fit your lifestyle</p>                    </div>
+
+                    <div class="text-center p-6">
+                        <div class="h-12 w-12 rounded-full bg-custom/10 text-custom inline-flex items-center justify-center mb-4">                            <i class="fas fa-chart-line text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-medium text-gray-900">Progress Tracking</h3>
+                        <p class="mt-2 text-gray-600">Monitor your improvement with detailed analytics</p>                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white">        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">                <div>
+                    <img class="h-8 w-auto" src="https://ai-public.creatie.ai/gen_page/logo_placeholder.png" alt="Logo">                    <p class="mt-4 text-gray-400">Smart study planning for better academic success</p>
+                </div>
+                <div>                    <h4 class="text-sm font-semibold uppercase tracking-wider">Resources</h4>
+                    <ul class="mt-4 space-y-2">                        <li><a href="#" class="text-gray-400 hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Guides</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">API Documentation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider">Company</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                    </ul>
+                </div>
+                <div>                    <h4 class="text-sm font-semibold uppercase tracking-wider">Legal</h4>
+                    <ul class="mt-4 space-y-2">                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Terms</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Cookie Policy</a></li>
+                    </ul>                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center">
+                <p class="text-gray-400">&copy; 2024 Smart Study Planner. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const chart = echarts.init(document.getElementById('studyChart'));
+        const option = {
+            animation: false,
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                data: ['Study Hours', 'Completion Rate']
+            },
+            xAxis: {
+                type: 'category',
+                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            },
+            yAxis: [
+                {
+                    type: 'value',
+                    name: 'Hours',
+                    min: 0,
+                    max: 8
+                },
+                {
+                    type: 'value',
+                    name: 'Completion %',
+                    min: 0,
+                    max: 100
+                }
+            ],
+            series: [
+                {
+                    name: 'Study Hours',
+                    type: 'bar',
+                    data: [3.2, 4.5, 5.0, 3.8, 4.2, 2.5, 1.8]
+                },
+                {
+                    name: 'Completion Rate',
+                    type: 'line',
+                    yAxisIndex: 1,
+                    data: [85, 90, 95, 80, 88, 70, 65]
+                }
+            ]
+        };
+        chart.setOption(option);
+        window.addEventListener('resize', () => chart.resize());
+    </script>
+</body>
+</html>

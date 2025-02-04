@@ -1,0 +1,15 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.bg-blue-600 {
+    background-color: #2563eb;
+}
+
+.bg-blue-700:hover {
+    background-color: #1d4ed8;
+}
+
+.text-blue-600 {
+    color: #2563eb;
+}
